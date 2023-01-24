@@ -40,7 +40,7 @@ function Contact() {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:3000/contact"
+              value="https://lukewarm-three.vercel.app"
             ></input>
             <input type="hidden" name="_captcha" value="false"></input>
             <div className="form-name-container">
