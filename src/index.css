@@ -32,6 +32,10 @@ a {
   color: var(--font);
 }
 
+a:focus {
+  outline: none;
+}
+
 .container {
   background-color: var(--primary);
   display: flex;
