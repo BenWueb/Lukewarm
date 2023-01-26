@@ -38,11 +38,10 @@ a:focus {
 
 .container {
   background-color: var(--primary);
-
+  padding-top: 75px;
   min-height: 100vh;
   max-width: 1600px;
   margin: auto;
-  margin-top: 75px;
 }
 
 .loadingSpinnerContainer {
@@ -129,7 +128,7 @@ a:focus {
   color: white;
 }
 
-/***** CTA Container *****/
+/****************************** CTA Container **************************/
 
 .header-container {
   height: 400px;
@@ -231,6 +230,7 @@ a:focus {
 
 .card:hover .card-content {
   opacity: 0;
+  display: none;
 }
 .card-img {
   height: 250px;
@@ -248,7 +248,8 @@ a:focus {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out 1;
+
   opacity: 1;
 }
 
@@ -410,7 +411,7 @@ a:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px 0px;
 }
 
 .page-description {
@@ -437,7 +438,6 @@ a:focus {
 .listing-container {
   display: flex;
   flex-direction: column;
-  margin: 100px;
 
   align-items: center;
   min-height: 100vh;
