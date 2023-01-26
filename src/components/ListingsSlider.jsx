@@ -33,7 +33,7 @@ function ListingsSlider() {
                 <Card
                   title={listing.data.title}
                   subtitle={listing.data.subtitle}
-                  imgUrl={listing.data.imgUrl}
+                  imgUrl={listing.data.imgUrls.map((img) => img.src)}
                   price={listing.data.price}
                   category={listing.data.category}
                   description={listing.data.description}
@@ -51,7 +51,7 @@ function ListingsSlider() {
                   <Card
                     title={listing.data.title}
                     subtitle={listing.data.subtitle}
-                    imgUrl={listing.data.imgUrl}
+                    imgUrl={listing.data.imgUrls.map((img) => img.src)}
                     price={listing.data.price}
                     category={listing.data.category}
                     description={listing.data.description}
@@ -70,7 +70,7 @@ function ListingsSlider() {
                   <Card
                     title={listing.data.title}
                     subtitle={listing.data.subtitle}
-                    imgUrl={listing.data.imgUrl}
+                    imgUrl={listing.data.imgUrls.map((img) => img.src)}
                     price={listing.data.price}
                     category={listing.data.category}
                     description={listing.data.description}

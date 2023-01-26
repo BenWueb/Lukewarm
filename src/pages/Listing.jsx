@@ -15,18 +15,11 @@ function Listing() {
 
   const params = useParams();
 
-  const {
-    category,
-    description,
-    imgUrl = [],
-    price,
-    subtitle,
-    title,
-  } = listing;
+  const { category, description, imgUrls, price, subtitle, title } = listing;
 
   useEffect(() => {
     const fetchListing = async () => {
-      const docRef = doc(db, "listings", params.listingId);
+      const docRef = doc(db, "testlistings", params.listingId);
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
@@ -47,7 +40,7 @@ function Listing() {
     <>
       <div className="listing-container">
         <div className="listing-img-container">
-          <ListingSlider imgUrl={imgUrl} />
+          <ListingSlider imgUrl={imgUrls} />
         </div>
         <div className="listing-content-container">
           <MdShare
