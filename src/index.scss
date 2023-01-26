@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -18,6 +19,7 @@
 body {
   font-family: "Rubik", sans-serif;
   color: var(--font);
+
   overflow-x: hidden;
 }
 
@@ -36,6 +38,7 @@ a:focus {
 
 .container {
   background-color: var(--primary);
+
   min-height: 100vh;
   max-width: 1600px;
   margin: auto;
@@ -61,19 +64,8 @@ a:focus {
   border: 8px solid;
   border-color: var(--primary) transparent var(--primary) transparent;
   border-radius: 50%;
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
+  animation: spin 1.2s linear infinite;
 }
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -82,7 +74,9 @@ a:focus {
     transform: rotate(360deg);
   }
 }
+
 /***** Navbar *****/
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -107,7 +101,8 @@ a:focus {
   padding: 10px 25px;
   border-radius: 50px;
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-color: var(--secondary);
   margin-left: 20px;
   cursor: pointer;
@@ -135,21 +130,24 @@ a:focus {
 }
 
 /***** CTA Container *****/
+
 .header-container {
   height: 400px;
   width: 100%;
   padding: 4rem;
-  background-image: url("assets/headerBackground.png"), radial-gradient(rgb(99, 99, 99), rgb(128, 128, 128));
+  background-image: url("assets/headerBackground.png"),
+    radial-gradient(rgb(99, 99, 99), rgb(128, 128, 128));
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: fill;
   background-position: top;
   background-attachment: fixed;
-}
-.header-container h1 {
-  color: white;
-  margin-top: 50px;
-  width: 80%;
+
+  h1 {
+    color: white;
+    margin-top: 50px;
+    width: 80%;
+  }
 }
 
 .button-container {
@@ -172,7 +170,8 @@ a:focus {
   padding: 15px 35px;
   border-radius: 50px;
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-color: var(--darker);
   cursor: pointer;
   margin-right: 25px;
@@ -189,13 +188,15 @@ a:focus {
   padding: 15px 35px;
   border-radius: 50px;
   border: solid 2px transparent;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-color: var(--primary);
   cursor: pointer;
   color: white;
 }
 
 /***** Listings Card *****/
+
 .slider-container {
   margin-bottom: 75px;
 }
@@ -231,15 +232,13 @@ a:focus {
 .card:hover .card-content {
   opacity: 0;
 }
-
 .card-img {
   height: 250px;
   transition: all 0.2s ease-in-out;
 }
 
 .card-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -273,6 +272,7 @@ a:focus {
 }
 
 /***** Location Section *****/
+
 .location {
   display: flex;
   justify-content: space-between;
@@ -286,7 +286,8 @@ a:focus {
   width: 600px;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   margin-right: 50px;
   flex: 1;
 }
@@ -296,7 +297,8 @@ a:focus {
   width: 600px;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   margin-left: 50px;
   flex: 1;
 }
@@ -304,15 +306,13 @@ a:focus {
 .location-image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .location-image-reverse img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .location-description {
@@ -338,6 +338,7 @@ a:focus {
 }
 
 /***** Section Animation *****/
+
 .hidden {
   transform: translateX(50%);
   opacity: 0;
@@ -360,6 +361,7 @@ a:focus {
 }
 
 /***** Footer ******/
+
 .footer {
   display: flex;
   justify-content: center;
@@ -402,6 +404,7 @@ a:focus {
 }
 
 /***** Listings Page *****/
+
 .page-header-container {
   display: flex;
   flex-direction: column;
@@ -430,10 +433,12 @@ a:focus {
 }
 
 /***** Listing Page *****/
+
 .listing-container {
   display: flex;
   flex-direction: column;
   margin: 100px;
+
   align-items: center;
   min-height: 100vh;
   padding: 0 200px;
@@ -451,8 +456,7 @@ a:focus {
   height: 100%;
   width: 100%;
   border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .listing-swiper-container {
@@ -523,6 +527,7 @@ a:focus {
 }
 
 /***** Event Page *****/
+
 .event-page-description {
   font-size: 24px;
 }
@@ -533,7 +538,8 @@ a:focus {
   align-items: center;
   border-radius: 15px;
   background-color: var(--secondary);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 50px;
   margin: 50px 75px;
 }
@@ -545,14 +551,14 @@ a:focus {
   overflow: hidden;
   margin-right: 100px;
   flex: 1;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .event-image-container img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .event-info-container {
@@ -597,10 +603,12 @@ a:focus {
   width: 100%;
   height: 200px;
   overflow-x: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 /***** About Page *****/
+
 .about-container {
   height: 100vh;
   margin-bottom: 100px;
@@ -639,8 +647,7 @@ a:focus {
 .about-img-container img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
 }
 
@@ -653,6 +660,7 @@ a:focus {
 }
 
 /***** Contact Page *****/
+
 .contact-page-container {
   height: 100vh;
   margin-bottom: 200px;
@@ -726,7 +734,8 @@ input {
   height: 50px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.3);
   outline: none;
   padding-left: 20px;
   font-family: inherit;
@@ -738,7 +747,8 @@ textarea {
   height: 150px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.3);
   outline: none;
   padding: 20px;
   font-family: inherit;
@@ -760,7 +770,8 @@ textarea {
   background-color: var(--darker);
   color: var(--font);
   border: none;
-  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 1px;
@@ -768,4 +779,4 @@ textarea {
 
 .form-button:hover {
   background-color: var(--dark);
-}/*# sourceMappingURL=index.css.map */
+}
