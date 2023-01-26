@@ -12,7 +12,7 @@ export const ListingsProvider = ({ children }) => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const listingsSnapshot = await getDocs(collection(db, "listings"));
+        const listingsSnapshot = await getDocs(collection(db, "testlistings"));
 
         listingsSnapshot.forEach((listing) => {
           return listingsArr.push({
@@ -22,6 +22,7 @@ export const ListingsProvider = ({ children }) => {
         });
 
         setListings(listingsArr);
+        console.log(listingsArr);
       } catch (error) {
         console.log(error);
       }

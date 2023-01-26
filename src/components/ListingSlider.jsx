@@ -28,7 +28,7 @@ function ListingSlider({ imgUrl }) {
         {imgUrl.map((img) => (
           <SwiperSlide>
             <div className="listing-img-container">
-              <img src={img} alt="" />
+              <img src={img.src} alt="" />
             </div>
           </SwiperSlide>
         ))}
