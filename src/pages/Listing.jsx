@@ -39,6 +39,10 @@ function Listing() {
   return (
     <>
       <div className="listing-container">
+        <div className="page-header-container">
+          <h3 className="page-title">{title}</h3>
+          <p className="page-description">{subtitle}</p>
+        </div>
         <div className="listing-img-container">
           <ListingSlider imgUrl={imgUrls} />
         </div>
@@ -57,10 +61,6 @@ function Listing() {
             }}
           />
 
-          <div className="listing-header">
-            <h3>{title}</h3>
-            <p>{subtitle}</p>
-          </div>
           <div className="listing-details-container">
             <div className="listing-name-container">
               <p className="info-name">Category:</p>

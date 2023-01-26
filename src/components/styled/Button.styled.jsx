@@ -17,6 +17,7 @@ export const StyledButton = styled.button`
   margin-right: 25px;
 
   &:hover {
-    transform: scale(0.98);
+    transform: scale(1.05);
+    opacity: 0.9;
   }
 `;

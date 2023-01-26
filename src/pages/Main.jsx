@@ -27,25 +27,20 @@ function Main() {
       {/* CTA Section */}
 
       <div className="header-container">
-        <div className="cta-container">
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            voluptate totam vitae numquam, soluta quae incidunt iusto at illum
-            eaque non quo, cum dolores aliquam
-          </h1>
-          <div className="button-container">
-            <div className="button-holder">
-              <Link to="/listings" style={{ textDecoration: "none" }}>
-                <StyledButton bg="var(--darker)">Browse Listings</StyledButton>
-              </Link>
-            </div>
-            <div className="button-holder">
-              <Link to="/events" style={{ textDecoration: "none" }}>
-                <StyledButton bg="var(--primary)">Upcoming Events</StyledButton>
-              </Link>
-            </div>
-          </div>
+        <div className="button-container">
+          <Link to="/listings" style={{ textDecoration: "none" }}>
+            <StyledButton bg="var(--darker)">Browse Listings</StyledButton>
+          </Link>
+
+          <Link to="/events" style={{ textDecoration: "none" }}>
+            <StyledButton bg="var(--primary)">Upcoming Events</StyledButton>
+          </Link>
         </div>
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          voluptate totam vitae numquam, soluta quae incidunt iusto at illum
+          eaque non quo, cum dolores aliquam
+        </h1>
       </div>
 
       <ListingsSlider />
