@@ -18,7 +18,7 @@ function Card({ title, subtitle, price, description, category, imgUrl, id }) {
           <p className="card-subtitle">{subtitle}</p>
           <p className="card-description">{description}</p>
         </div>
-        <button onClick={onClick} className="card-link menu-btn">
+        <button onClick={onClick} className="card-link card-btn">
           View item
         </button>
       </div>

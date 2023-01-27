@@ -1,8 +1,11 @@
+import PageHeader from "../components/PageHeader";
+
 function About() {
   return (
     <>
+      <PageHeader />
       <div className="about-container">
-        <header className="about-header">
+        <header className="page-header-container">
           <h1>About</h1>
         </header>
         <div className="about-content-container">

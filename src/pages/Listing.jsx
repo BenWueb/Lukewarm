@@ -6,6 +6,7 @@ import ListingSlider from "../components/ListingSlider";
 import Spinner from "../components/Spinner";
 import { MdShare } from "react-icons/md";
 import { toast } from "react-toastify";
+import PageHeader from "../components/PageHeader";
 
 function Listing() {
   const [listing, setListing] = useState({});
@@ -38,6 +39,7 @@ function Listing() {
 
   return (
     <>
+      <PageHeader />
       <div className="listing-container">
         <div className="page-header-container">
           <h3 className="page-title">{title}</h3>
