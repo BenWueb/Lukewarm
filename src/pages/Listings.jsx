@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Card from "../components/Card";
 import Spinner from "../components/Spinner";
 import ListingsContext from "../context/ListingsContext";
+import PageHeader from "../components/PageHeader";
 
 function Listings() {
   const { listings } = useContext(ListingsContext);
@@ -13,6 +14,8 @@ function Listings() {
 
   return (
     <div>
+      <PageHeader />
+
       <header className="page-header-container">
         <h1 className="page-title">Listings</h1>
         <p className="page-description">

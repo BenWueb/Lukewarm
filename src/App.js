@@ -18,7 +18,6 @@ function App() {
       <ListingsProvider>
         <div className="container">
           <Router>
-            <Navbar />
             <Routes>
               <Route exact path="/" element={<Main />} />
               <Route path="/listings" element={<Listings />} />

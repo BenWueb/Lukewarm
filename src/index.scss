@@ -12,14 +12,14 @@
   --dark: #f4978e;
   --darker: #f08080;
   --font: #443c2e;
-  --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  --box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 body {
   font-family: "Rubik", sans-serif;
   color: var(--font);
-
+  background-image: linear-gradient(var(--secondary), var(--primary));
   overflow-x: hidden;
 }
 
@@ -37,10 +37,10 @@ a:focus {
 }
 
 .container {
-  background-color: var(--primary);
-  padding-top: 75px;
+  background-image: linear-gradient(var(--secondary), var(--primary));
+  position: relative;
   min-height: 100vh;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -80,13 +80,13 @@ a:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  margin-bottom: 8rem;
   width: 100%;
   height: 75px;
-  position: fixed;
+
   top: 0;
   max-width: 1600px;
-  background-color: var(--secondary);
+
   z-index: 10;
 }
 
@@ -100,11 +100,11 @@ a:focus {
   padding: 10px 25px;
   border-radius: 50px;
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  background-color: var(--secondary);
+
+  background-color: transparent;
   margin-left: 20px;
   cursor: pointer;
+  color: rgb(211, 211, 211);
 }
 
 .menu-btn:hover {
@@ -130,12 +130,12 @@ a:focus {
 
 /****************************** CTA Container **************************/
 
-.header-container {
-  height: 400px;
+.main-header-container {
+  height: 600px;
   width: 100%;
-  padding: 4rem;
-  background-image: url("assets/headerBackground.png"),
-    radial-gradient(rgb(99, 99, 99), rgb(128, 128, 128));
+  padding: 0 4rem;
+  background-image: url("assets/thanos-pal--12cgSu9HW0-unsplash\(2\).jpg"),
+    linear-gradient(rgb(128, 128, 128), rgb(255, 255, 255));
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: fill;
@@ -147,6 +147,19 @@ a:focus {
     margin-top: 50px;
     width: 80%;
   }
+}
+
+.header-container {
+  height: 75px;
+  width: 100%;
+  padding: 0 4rem;
+  background-image: url("assets/thanos-pal--12cgSu9HW0-unsplash\(2\).jpg"),
+    linear-gradient(rgb(128, 128, 128), rgb(255, 255, 255));
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: top;
+  background-attachment: fixed;
 }
 
 .button-container {
@@ -169,8 +182,7 @@ a:focus {
   padding: 15px 35px;
   border-radius: 50px;
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
   background-color: var(--darker);
   cursor: pointer;
   margin-right: 25px;
@@ -187,14 +199,31 @@ a:focus {
   padding: 15px 35px;
   border-radius: 50px;
   border: solid 2px transparent;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
   background-color: var(--primary);
   cursor: pointer;
   color: white;
 }
 
 /***** Listings Card *****/
+
+.card-btn {
+  font-family: var(--font);
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--secondary);
+  opacity: 0.9;
+}
+
+.card-btn:hover {
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow);
+}
 
 .slider-container {
   margin-bottom: 75px;
@@ -204,7 +233,6 @@ a:focus {
   display: flex;
   justify-content: space-between;
   padding: 100px;
-  background-color: var(--darker);
 }
 
 .card {
@@ -287,8 +315,7 @@ a:focus {
   width: 600px;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 500px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
   margin-right: 50px;
   flex: 1;
 }
@@ -296,10 +323,10 @@ a:focus {
 .location-image-reverse {
   height: 400px;
   width: 600px;
+
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
   margin-left: 50px;
   flex: 1;
 }
@@ -412,6 +439,11 @@ a:focus {
   justify-content: center;
   align-items: center;
   margin: 50px 0px;
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
 }
 
 .page-description {
@@ -429,7 +461,7 @@ a:focus {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 75px 150px;
+  margin: 75px;
   gap: 80px 20px;
 }
 
@@ -538,8 +570,7 @@ a:focus {
   align-items: center;
   border-radius: 15px;
   background-color: var(--secondary);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
   padding: 50px;
   margin: 50px 75px;
 }
@@ -551,10 +582,8 @@ a:focus {
   overflow: hidden;
   margin-right: 100px;
   flex: 1;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
 }
-
 .event-image-container img {
   height: 100%;
   width: 100%;
@@ -603,8 +632,7 @@ a:focus {
   width: 100%;
   height: 200px;
   overflow-x: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--box-shadow);
 }
 
 /***** About Page *****/
@@ -663,7 +691,7 @@ a:focus {
 
 .contact-page-container {
   height: 100vh;
-  margin-bottom: 200px;
+  margin: 50px 0;
 }
 
 .contact-header {
@@ -681,7 +709,7 @@ a:focus {
 .contact-container {
   display: flex;
   justify-content: space-around;
-  margin: 50px 75px;
+  padding: 200px 0;
 }
 
 .contact-img {
@@ -734,8 +762,7 @@ input {
   height: 50px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
-    0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   outline: none;
   padding-left: 20px;
   font-family: inherit;
@@ -747,8 +774,7 @@ textarea {
   height: 150px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
-    0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   outline: none;
   padding: 20px;
   font-family: inherit;
@@ -770,8 +796,7 @@ textarea {
   background-color: var(--darker);
   color: var(--font);
   border: none;
-  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
-    0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 1px;

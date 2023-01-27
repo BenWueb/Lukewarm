@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import ListingsSlider from "../components/ListingsSlider";
-import HomepageSection from "../components/HomepageSection";
-import HomepageSectionReverse from "../components/HomepageSectionReverse";
 import { StyledButton } from "../components/styled/Button.styled";
-import Event from "../components/Event";
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
 
 function Main() {
   useEffect(() => {
@@ -26,19 +21,24 @@ function Main() {
 
   return (
     <div>
-      <Header />
-      <ListingsSlider />
-      <div className="hidden-right">
-        <HomepageSection />
-      </div>
-      <div className="hidden">
-        <HomepageSectionReverse />
-      </div>
-      <div className="hidden-right">
-        <div className="section-header">
-          <h1>Upcoming Events</h1>
+      {/* CTA Section */}
+
+      <div className="main-header-container">
+        <Navbar />
+        <div className="button-container">
+          <Link to="/listings" style={{ textDecoration: "none" }}>
+            <StyledButton bg="var(--darker)">Browse Listings</StyledButton>
+          </Link>
+
+          <Link to="/events" style={{ textDecoration: "none" }}>
+            <StyledButton bg="var(--primary)">Upcoming Events</StyledButton>
+          </Link>
         </div>
-        <Event />
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          voluptate totam vitae numquam, soluta quae incidunt iusto at illum
+          eaque non quo, cum dolores aliquam
+        </h1>
       </div>
     </div>
   );
